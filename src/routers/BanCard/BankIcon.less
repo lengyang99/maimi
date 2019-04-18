@@ -1,0 +1,18 @@
+.bg-image(@className,@url) {
+    .bank-@{className}{
+        background-size: 100%, 100%;
+        background-repeat: no-repeat;
+        background-image: url("../../img/authentication/bank/bank_@{url}@2x.png");
+        @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+            background-image: url("../../img/authentication/bank/bank_@{url}@3x.png");
+        
+          }
+    }
+  }
+@bgcardList:China,ABC,build,ICBC,zhaoshang,jiaotong,Xingye,Everbright,CITIC,huaxia,guangfa,SPD,youzheng,minsheng,pingan;
+.loop(@i) when (@i < length(@bgcardList)+1){
+    .bg-image(extract(@bgcardList, @i),extract(@bgcardList, @i));
+    .loop(@i+1);
+}
+
+.loop(1);

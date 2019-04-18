@@ -1,0 +1,205 @@
+@import '../Operator/common.less';
+.bind-bank-list {
+    .am-list-header{
+            padding: 28px 30px;
+            height: 88px;
+        .list-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 34px;
+            label:nth-child(2){
+                color:rgba(103,125,245,1);
+            }
+        }
+    }
+
+    .am-list-body {
+            height: 445px;
+        .form-item {
+            height: 88px;
+            .am-list-line {
+                padding: 28px 15px;
+                .am-input-label.am-input-label-5{
+                        width: 200px;
+                        margin-right: 19px;
+                        height:32px;
+                        font-size:34px;
+                        font-family:PingFang-SC-Regular;
+                        font-weight:400;
+                        color:rgba(0,0,0,1);
+                        line-height:29px;
+                }
+                .am-input-control{
+                        height: 88px;
+                        input{
+                            height: 100%;
+                            font-size: 34px;
+                        }
+                }
+                .am-input-extra{
+                        width:220px;
+                        max-height: 220px;
+                        height:52px;
+                        line-height: 52px;
+                        margin: 18px 15px 18px 20px;
+                        font-size: 28px;
+                        text-align: center;
+                        border: 2px solid rgba(160,160,160,1);
+                        border-radius:8px;
+                }
+                .am-list-extra {
+                        padding: 0px 0px;
+                        height:32px;
+                        font-family:PingFang-SC-Regular;
+                        font-weight:400;
+                        color:rgba(0,0,0,1);
+                        font-size:34px;
+                        line-height:29px;
+                } 
+            }
+        }
+        .form-item-code {
+            height: 88px;
+            .am-list-line {
+                padding: 28px 15px;
+                .am-input-label.am-input-label-5{
+                        width: 200px;
+                        margin-right: 19px;
+                        height:32px;
+                        font-size:34px;
+                        font-family:PingFang-SC-Regular;
+                        font-weight:400;
+                        color:rgba(0,0,0,1);
+                        line-height:29px;
+                }
+                .am-input-control{
+                        height: 88px;
+                        input{
+                            height: 100%;
+                            font-size: 34px;
+                        }
+                }
+                .am-input-extra{
+                        max-height: 26px;
+                        height: 26px;
+                        width: 14px;
+                        margin-right: 17px;
+                        .bg-image('../../img/cart/top_Nav_Return_btn');
+
+                }
+                .am-list-extra {
+                        padding: 0px 0px;
+                        height:32px;
+                        font-family:PingFang-SC-Regular;
+                        font-weight:400;
+                        color:rgba(0,0,0,1);
+                        font-size:34px;
+                        line-height:29px;
+                } 
+            }
+        }
+    }
+    .am-list-footer{
+        height: 53px;
+        padding: 36px 63px 36px 50px;
+        font-size: 24px;
+        line-height: 30px;
+        .list-footer {
+            display: flex;
+            align-items: center;
+            .tui-checkbox:checked {
+                background: #09bb07
+            }
+            .tui-checkbox {
+                width:47px;
+                height:47px;
+                background-color:#ffffff;
+                border:solid 1px #dddddd;
+                -webkit-border-radius:50%;
+                border-radius:50%;
+                font-size:0.8rem;
+                margin:0;
+                padding:0;
+                position:relative;
+                .bg-image('../../img/authentication/button-select-default');
+                display:inline-block;
+                vertical-align:middle;
+                cursor:default;
+                -webkit-appearance:none;
+                -webkit-user-select:none;
+                user-select:none;
+                -webkit-transition:background-color ease 0.1s;
+                transition:background-color ease 0.1s;
+            }
+            .tui-checkbox:checked::after {
+                content:'';
+                top:12px;
+                left:12px;
+                position:absolute;
+                background:transparent;
+                border:#fff solid 2px;
+                border-top:none;
+                border-right:none;
+                height:10px;
+                width:20px;
+                -moz-transform:rotate(-45deg);
+                -ms-transform:rotate(-45deg);
+                -webkit-transform:rotate(-45deg);
+                transform:rotate(-45deg);
+            }
+            .span-title {
+                width:567px;
+                margin-left: 24px;
+                font-size:24px;
+                font-family:PingFang-SC-Regular;
+                font-weight:400;
+                color:rgba(153,153,153,1);
+                line-height:30px;
+            }
+        }
+    }
+    :global {
+        .am-list-item .am-list-line .am-list-content {
+            padding: 0px 0px;
+            height:32px;
+            font-size:34px;
+            font-family:PingFang-SC-Regular;
+            font-weight:400;
+            color:rgba(0,0,0,1);
+            line-height:29px;
+        }
+    }
+  
+
+}
+    
+.bank-modal {
+    .am-modal-body {
+        height: 600px;
+    }
+    .am-modal-button-group-v .am-modal-button {
+        height:88px;
+        background:rgba(239,239,244,1);
+        font-size:38px;
+        font-family:PingFang-SC-Medium;
+        font-weight:500;
+        color:rgba(0,0,0,1);
+        line-height:88px;
+    }
+    .am-modal-header {
+        padding: 28px 30px;
+        height: 32px;
+        background:rgba(239,239,244,1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .am-modal-title {
+            font-size: 34px;
+            font-family:PingFang-SC-Medium;
+            font-weight:500;
+            color:rgba(51,51,51,1);
+            line-height:44px;
+        }
+    }
+}

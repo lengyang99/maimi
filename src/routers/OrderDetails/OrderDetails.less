@@ -1,0 +1,334 @@
+.bg-image(@url) {
+
+  background-image: url("@{url}@2x.png");
+
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+
+    background-image: url("@{url}@3x.png");
+
+  }
+
+}
+.container{
+  width: 100%;
+  height: 100%;
+  margin-top: 108px;
+  .orderStatus{
+    width: 100%;
+    height: 88px;
+    background-color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: PingFang-SC-Bold;
+    box-sizing: border-box;
+    line-height: 88px;
+    span{
+      margin-left: 25px;
+    }
+    .status{
+      margin-right: 40px;
+      float: right;
+      font-family: PingFang-SC-Medium;
+    }
+  }
+  .loanDetails{
+    margin-top: 20px;
+    width: 100%;
+    padding: 48px 40px 45px 30px;
+    background-color: white;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    .title{
+      font-size: 32px;
+      font-weight: bold;
+      font-family: PingFang-SC-Bold;
+
+    }
+    ul{
+      margin-top: 48px;
+      padding-left: 11px;
+      color: #999;
+      font-size: 28px;
+      font-family: PingFang-SC-Medium;
+      li{
+        margin-bottom: 40px;
+        .right{
+          float: right;
+          color: #333;
+        }
+      }
+      li:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .bankCard{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 50px 40px;
+    background-color: white;
+    ul{
+      padding-left: 11px;
+      color: #999;
+      font-size: 28px;
+      font-family: PingFang-SC-Medium;
+      li{
+        margin-bottom: 40px;
+        .right{
+          float: right;
+          color: #333;
+        }
+      }
+      .sum{
+        margin-bottom: 0;
+        font-size: 32px;
+        font-family: PingFang-SC-Bold;
+        font-weight: bold;
+        color: #333;
+        .right{
+          color:#677DF5;
+        }
+      }
+    }
+  }
+  .isMargin{
+    margin-bottom: 150px;
+  }
+  .goodsInfo{
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 45px 35px 45px 40px;
+    background-color: white;
+    position: relative;
+    .info{
+      display: flex;
+      justify-content: space-between;
+    }
+    .goods{
+      width: 316px;
+      height: 130px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-family: PingFang-SC-Medium;
+      font-size: 24px;
+      .goodsName{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #333;
+      }
+      .goodsAttribute{
+        color: #999;
+        text-align: left ;
+
+      }
+      .goodsPrice{
+        margin-right: 50px;
+        color: #333;
+      }
+      .count{
+        color: #999;
+      }
+    }
+    .toLogistics{
+      font-family: PingFang-SC-Medium;
+      font-size: 28px;
+      color: #333;
+      position: absolute;
+      bottom: 45px;
+      right: 35px;
+    }
+    img{
+      width: 130px;
+      height: 130px;
+      margin-right: 29px;
+    }
+    .title{
+      font-family: PingFang-SC-Medium;
+      font-size: 28px;
+      color: #999;
+      vertical-align: top;
+    }
+  }
+  .refund{
+    z-index: 100;
+    width: 100%;
+    height: 130px;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    padding: 6px 21px;
+    box-sizing: border-box;
+    .button{
+      height: 100%;
+      background-repeat:no-repeat;
+      //.bg-image('../../img/order/butten-black-add');
+      .bg-image('../../img/order/butten-default');
+      background-size: 100% 100%;
+      .leftButton{
+        width: 560px;
+        height: 100%;
+        //display: inline-block;
+        font-size: 40px;
+        color: #fff;
+        text-align: center;
+        line-height: 118px;
+        font-weight: bold;
+        display: inline-block;
+      }
+      .rightButton{
+        width: 145px;
+        height: 100%;
+        float: right;
+        display: inline-block;
+        .bg-image('../../img/order/wenhao');
+        background-repeat:no-repeat;
+        background-size: 52px 51px;
+        background-position: center center;
+      }
+    }
+    #isRepaying{
+      .bg-image('../../img/order/btn_lmnq-disabled');
+      .leftButton{
+        width: 100%;
+      }
+      .rightButton{
+        display: none;
+      }
+    }
+  }
+  .mask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    background-color: rgba(0,0,0,.3);
+    .content{
+      font-family: PingFang-SC;
+      border-radius: 24px 24px 0 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 678px;
+      background-color: #fff;
+      ul{
+        //display: flex;
+        //flex-direction: column;
+        //justify-content: space-between;
+        box-sizing: border-box;
+        padding: 41px 66px 0 77px;
+        .title{
+          font-weight: bold;
+          font-size: 38px;
+          color: #333;
+          text-align: center;
+          margin-bottom: 45px;
+        }
+        .alipayId{
+          font-size: 28px;
+          color: #999;
+          margin-bottom: 30px;
+          .right{
+            float: right;;
+          }
+        }
+        .copyId{
+          color: #333;
+          font-size: 28px;
+          text-align: right;
+          margin-bottom: 40px;
+        }
+        .name{
+          font-size: 28px;
+          color: #999;
+          margin-bottom: 45px;
+          .right{
+            float: right;;
+          }
+        }
+        .hint{
+          font-size: 28px;
+          color: #999;
+          margin-bottom: 35px;
+        }
+        .hintInfo{
+          font-size: 28px;
+          color: #999;
+          margin-bottom: 40px;
+          span{
+            color: #333;
+          }
+        }
+      }
+      .iKnow{
+        width: 690px;
+        height: 90px;
+        border-radius: 8px;
+        background-color: #677DF5;
+        margin: 0 auto;
+        display: block;
+        font-size: 40px;
+        font-weight: bold;
+        color: #fff;
+      }
+    }
+    .payFor{
+      background-color: #fff;
+      width: 560px;
+      height: 290px;
+      border-radius: 8px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin:auto;
+      h4.title{
+        height: 36px;
+        margin-top: 40px;
+        text-align: center;
+        font-size: 38px;
+      }
+      .price{
+        margin-top: 40px;
+        color: #999;
+        font-size: 34px;
+        text-align: center;
+        span{
+          color: #677DF5;
+        }
+      }
+      div{
+        display: inline-block;
+        width: 50%;
+        height: 100px;
+        border-top: 1px solid #999;
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 0;
+        color: #999;
+        font-family: Adobe Heiti Std R;
+        text-align: center;
+        line-height: 100px;
+        font-size: 36px;
+      }
+      div.ok{
+        border-left: 1px solid #999;
+        right: 0;
+        color: #677DF5;
+      }
+    }
+  }
+}
+//阻止滑动
+.noScroll{
+  overflow: hidden;
+}

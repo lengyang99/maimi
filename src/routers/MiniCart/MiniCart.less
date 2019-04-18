@@ -1,0 +1,219 @@
+.bg-image(@url){
+    background-size:100% 100%;
+    background-repeat: no-repeat; 
+    background-image: url("../../img/cart/@{url}@2x.png");
+    @media(-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3){
+      background-image: url("../../img/cart/@{url}@3x.png")
+    }
+}
+@font: 'PingFang-SC-Medium'; 
+.cart-wrap{
+    height: 110px;
+    width: 10rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index:9999;
+    display: flex;
+    background: #fff;
+    // background-size:100% 100%;
+    // background-repeat: repeat; 
+    // .bg-image('Button_White_bg_Projection');
+    .minicart-btn{
+        position: absolute;
+        top:-22px;
+        left: 28px;
+        width: 98px;
+        height: 98px;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        .bg-image('gouwuche-yuan');
+        .count-icon{
+            display: block;
+            width: 24px;
+            height: 24px;
+            border-radius: 12px;
+            text-align: center;
+            line-height: 24px;
+            position: absolute;
+            top:19px;
+            right: 16px;
+            z-index:9;
+            font-size: 20px;
+            font-family: 'PingFang-SC-Medium';
+            color: #fff;
+            font-style: normal;
+            .bg-image('gouwuche-shuzi')
+        }
+        .cart-icon{
+            width: 52px;
+            height: 52px;
+            position: absolute;
+            left: 24px;
+            top:24px;
+        }
+        .cart-icon-none{
+            .bg-image('gouwuche-disable')
+        }
+        .cart-icon-you{
+            .bg-image('gouwuche-youshangpin')
+        }
+    }
+    .total-price{
+        position: absolute;
+        top:50px;
+        right:323px;
+        color:#999;
+        font-size: 24px;
+        font-family: @font
+    }
+    .cart-submit{
+        width: 300px;
+        height:98px;
+        position: absolute;
+        bottom: 0;
+        right:0;
+        text-align: center;
+        line-height: 98px;
+        font-size: 38px;
+        color:#fff;
+        &.no-buy{
+            .bg-image('btn_lmnq')
+        }
+        &.buy{
+            .bg-image('1015')
+        }
+    }
+}
+   
+    .cart-content{
+        .cart-list{
+            width: 10rem;
+            padding-top: 44px;
+            overflow: auto;
+            padding-bottom: 46px;
+            margin-bottom: 98px;
+            .list-header{
+                padding:0 40px;
+                display: flex;
+                justify-content: space-between;
+                height: 44px; 
+                p{
+                    line-height: 44px;
+                    font-size: 32px;
+                    font-family: @font;
+                    font-weight: bold;
+                    color: #333
+                }
+                .empty-wrap{
+                    display: flex;
+                    align-items:flex-end;
+                    height: 44px;
+                    .empty{
+                        color:#999;
+                        font-size: 32px;
+                        font-family: @font;
+                        vertical-align: top;
+                        line-height: 44px;
+                        position: relative;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top:12px;
+                            left: -28px;;
+                            height: 28px;
+                            width: 28px;
+                            .bg-image('empty');
+                            display: block;
+                        }
+                    }
+                    // .empty-icon{
+                    //     display: inline-block;
+                    //     width: 28px;
+                    //     height: 28px;
+                    //     display: inline-block;
+                    //     .bg-image('empty')
+                    // }
+                }
+            }
+            .buy-count-operate{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 90px;
+                margin-right: 30px;
+                float: right;
+                width: 148px;
+            }
+            .buy-decrease{
+                width: 42px;
+                height: 42px;
+                .bg-image('store-cancel-deafult')
+            }
+            .buy-count{
+                font-size: 28px;
+                color: #000
+            }
+            .buy-add{
+                width: 42px;
+                height: 42px;
+                .bg-image('store-add')
+            }
+            .products-info{
+                margin-top: 40px;
+                margin-left: 30px;
+                .products-name{
+                    // height: 28px;
+                    width:350px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-align: left;
+                    line-height: 44px;
+                    font-family: "PingFang-SC-Medium" ;
+                    font-size: 28px;
+                    color:#333;
+                }
+                .products-sku{
+                    font-size: 24px;
+                    line-height: 44px;
+                    text-align: left;
+                    font-family: "PingFang-SC-Medium";
+                    color:#999;
+                }
+                .products-price-wrap{
+                    // margin-top: 30px;
+                    text-align: left;
+                    line-height: 44px;
+                    span{
+                        font-size: 24px;
+                        color:#677DF5;
+                    }
+                    em{
+                        font-size: 24px;
+                        color:#677DF5;
+                    }
+                    i{
+                        color:#999;
+                        font-size: 24px;
+                        padding-left: 10px;
+                    }
+                   em, i{
+                        font-style: normal;
+                    }
+                }
+            }
+        }
+        
+    }
+:global{
+    .am-modal-content{
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+    }
+    .am-toast{
+        font-size: 28px;
+        padding: 5px;
+    }
+}
+

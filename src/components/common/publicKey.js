@@ -1,0 +1,2 @@
+const publicKey = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2EIkMyKalv3/vz9kI6SrLeK21saODG62UF/fiobcXt4lN3gw4lwx9UeGMUSYyyWLhUdETSHICI+soKsgkp4ibICTZDNutARqbx+GNbhJa3g4cTivPCwldlVHiW1HByehkEvZYFHvAkn//TlTJk+FBu12a+N9LzolzKN7x7P1N4QIDAQAB";
+export default publicKey;

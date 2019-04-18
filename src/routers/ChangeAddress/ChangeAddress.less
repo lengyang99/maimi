@@ -1,0 +1,145 @@
+.bg-image(@url){
+    background-size: 100% 100%;
+    background-repeat:no-repeat; 
+    background-image: url("../../img/cart/@{url}@2x.png");
+    @media(-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3){
+      background-image: url("../../img/cart/@{url}@3x.png")
+    }
+}
+.wp-modal-list{
+    padding-left: 40px;
+    color: #333;
+    font-size:28px;
+    font-family: 'PingFang-SC-Bold'; 
+    height: 88px;
+    line-height: 88px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.changeAddress{
+    .input-label{
+        padding-left:30px; 
+    }
+    .submit-wrap{
+        position: fixed;
+        bottom:0;
+        left:0;
+        width: 750px;
+        background-color: #fff;
+        height: 130px;
+    }
+    .submit{
+        border:0;
+        width: 709px;
+        height: 109px;
+        margin:  0 auto;
+        margin-top: 18px;
+        display: block;
+        background: #fff;
+        color: #fff;
+        font-size: 38px;
+        .bg-image('btn_lmnq_address')
+    }
+    .input-wrap{
+        padding: 0 30px;
+        width: 750px;
+        box-sizing: border-box;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        .input-label{
+            width: 170px;
+            color: #666;
+            font-size: 28px;
+            line-height: 90px;
+        }
+        .input{
+            background-color:#fff;
+            border: 0;
+            color: #999;
+            line-height: 90px;
+            font-size: 28px; 
+            width: 320px;
+            min-width: 320px;
+        }
+    }
+    input[type="button"], input[type="submit"], input[type="reset"] {-webkit-appearance: none;}
+    input:focus, textarea:focus {outline: none;}
+    input:focus{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+    .line{
+        height: 1px;
+        width: 750px;
+        background: #e5e5e5
+    }
+    .info-wrap{
+        padding-top: 50px;
+        margin-top: 88px;
+        background: #fff
+    }
+    .address-wrap{
+        margin-top: 20px;
+        background: #fff;
+    }
+    .detail-address-wrap{
+        display: flex;
+        padding: 0 30px;
+        padding-bottom: 50px;
+        .input-label{
+            width: 170px;
+            color: #666;
+            font-size: 28px;
+            line-height: 90px;
+        }
+        .detail-address{
+            padding-top:24px; 
+            border:0;
+            background: #fff;
+            font-size: 28px;
+            line-height: 44px;
+            font-family: "PingFang-SC-Regular";
+            min-height: 114px;
+            width: 196px;
+        }
+    }
+    .form-wrap{
+       
+        // background: #fff;
+    }
+    .input-wrap{
+        display: flex;
+        align-items: center;
+        
+    }
+    .bottom-line{
+border-bottom: 1px solid #e5e5e5
+    }
+    .choose-province{
+        width: 750px;
+        height: 90px;
+        // padding-left: 30px; 
+        display: flex;
+    }
+    .mock-input{
+        width: 300px;
+        line-height: 90px;
+        font-size: 28px;
+        color:#999;
+        font-family: 'PingFang-SC-Regular'
+    }
+    .address-picker-wrap{
+        margin-top: 50px;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .mock-label{
+        display: block;
+        box-sizing: border-box;
+        width: 173px;
+        padding-left: 30px;
+        font-size: 28px;
+        line-height: 90px;
+        font-family: 'PingFang-SC-Regular';
+        color: #666
+    }
+    .address-detail-wrap{
+        margin-top: 30px;
+    }
+}

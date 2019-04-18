@@ -1,0 +1,44 @@
+.bg-image(@url){
+    background-size: 100% 100%;
+    background-repeat:no-repeat; 
+    background-image: url("../../img/cart/@{url}@2x.png");
+    @media(-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3){
+      background-image: url("../../img/cart/@{url}@3x.png")
+    }
+}
+.verify-wrap{
+    margin-top: 235px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.verify-title{
+    margin-top: 153px;
+    color: #333;
+    font-size: 36px;
+    font-family: 'PingFang-SC-Medium';
+}
+.verify-content{
+    margin-top: 30px;
+    color: #666;
+    font-size: 24px;
+    font-family: 'PingFang-SC-Medium';
+}
+.verify-img{
+    width: 300px;
+    height: 290px;
+    .bg-image('Messages-shopping')
+}
+.next{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 98px;
+    width: 750px;
+    font-size: 38px;
+    font-family: 'PingFang-SC-Bold';
+    color: #fff;
+    line-height: 98px;
+    text-align: center;
+    .bg-image('1015')
+}

@@ -1,0 +1,107 @@
+.bg-image(@className,@url,@type) {
+    .bank-@{className}{
+        background-size: 100%, 100%;
+        background-repeat: no-repeat;
+        background-image: if((@type=1),url("../../img/authentication/bank/bank_@{url}@2x.png"),url("../../img/authentication/bank/@{url}@2x.png"));
+        @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+            background-image: if((@type=1),url("../../img/authentication/bank/bank_@{url}@2x.png"),url("../../img/authentication/bank/@{url}@2x.png"));
+          }
+    }
+  }
+@bgMarkList:China-b,ABC-b,build-b,ICBC-b,zhaoshang-b,jiaotong-b,Xingye-b,Everbright-b,CITIC-b,huaxia-b,guangfa-b,SPD-b,youzheng-b,minsheng-b,pingan-b;
+.loopMark(@i) when (@i < length(@bgMarkList)+1){
+    .bg-image(extract(@bgMarkList, @i),extract(@bgMarkList, @i), 1);
+    .loopMark(@i+1);
+}
+
+.loopMark(1);
+
+.bg-image(bg-red,bg-red, 0);
+.bg-image(bg-green,bg-green, 0);
+.bg-image(bg-blue,bg-blue, 0);
+
+.list {
+    .list-header {
+            padding-left: 30px;
+            padding-right: 30px;
+            font-size: 34px;
+            height: 88px;
+            background:rgba(239,239,244,1);
+            line-height: 88px;
+        }
+    .view {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .bank-card {
+            position: relative;
+            width: 690px;
+            height: 260px;
+            margin-top: 30px;
+            box-shadow:0px 4px 12px 0px rgba(255, 106, 92, 0.35);
+            border-radius:8px;
+            font-family:SanFranciscoDisplay-Medium;
+            font-weight:500;
+            color:rgba(255,255,255,1);
+            .bank-icon-name {
+                display: flex;
+                margin: 38px 0px 0px 40px;
+                height: 60px;
+                .bank-icon {
+                    width: 60px;
+                    height: 60px;
+                    margin-right: 20px;
+                }
+                .bank-name {
+                    margin-left: 0px;
+                    color:rgba(255,255,255,1);
+                    font-size:34px;
+                }
+                .bank-type {
+                    color:rgba(255,255,255,1);
+                    font-size:24px;
+                }
+            }
+            .bank-number {
+                margin-top: 69px;
+                margin-left: 120px;
+                font-size:36px;
+                height: 24px;
+                &>label{
+                    margin-right: 53px;
+                }
+            }
+            .bank-mark {
+                position: absolute;
+                width: 297px;
+                height: 182px;
+                right: 0px;
+                bottom: 0px;
+            }
+        }
+        .bank-info {
+            display: flex;
+            width: 690px;
+            margin-top: 40px;
+            justify-content: space-between;
+            font-family:PingFang-SC-Medium;
+            font-weight:500;
+            :nth-child(1){
+                height:32px;
+                font-size:34px;
+                color:rgba(102,102,102,1);
+                line-height:44px; 
+            }
+            :nth-child(2){
+                width:230px;
+                height:58px;
+                text-align: center;
+                line-height: 58px;
+                font-size: 28px;
+                border:2px solid rgba(103,125,245,1);
+                border-radius:30px;
+                color:rgba(103,125,245,1)
+            }
+        }
+    }
+}

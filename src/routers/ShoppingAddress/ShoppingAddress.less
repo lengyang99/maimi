@@ -1,0 +1,99 @@
+.bg-image(@url){
+    background-size: 100% 100%;
+    background-repeat:no-repeat; 
+    background-image: url("../../img/cart/@{url}@2x.png");
+    @media(-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3){
+      background-image: url("../../img/cart/@{url}@3x.png")
+    }
+}
+.address{
+    .address-btn{
+        width: 690px;
+        height: 90px;
+        background: #677DF5;
+        border-radius: 8px;
+        color: #fff;
+        margin: 0 30px;
+        text-align: center;
+        line-height: 90px;
+        font-size: 40px;
+        font-family: "PingFang-SC-Heavy"
+    }
+    .address-list{
+        background: #fff;
+        margin-top: 108px;
+        .address-content{
+            display: flex;
+            justify-content: space-between;
+            padding: 50px 30px 50px 60px;
+            align-items: center;
+        }
+    }
+    .address-info{
+        overflow: hidden;
+        .username{
+            max-width: 180px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        div{
+            color: #999;
+            font-size: 28px;
+            font-family: 'PingFang-SC-Medium';
+            float: left;
+        }
+        .phone{
+            margin-left: 75px;
+        }
+       
+    }
+    .address-context{
+        color: #999;
+        margin-top: 10px;
+        font-size: 28px;
+        font-family: 'PingFang-SC-Medium';
+        width: 445px ;
+        line-height: 44px;
+    }
+    .editor-address{
+        color: #333;
+        font-size: 32px;
+        font-family: "PingFang-SC-Medium";
+        line-height: 44px;
+    }
+    .delete-address{
+        color: #999;
+        font-size: 32px;
+        font-family: "PingFang-SC-Medium";
+        margin-top: 28px;
+        line-height: 44px;
+    }
+    .address-check{
+       width: 24px;
+       height:24px;
+       font-style: normal;
+       display: block;
+       background-repeat: no-repeat; 
+       .bg-image('checked');
+       &.active-check{
+           position: relative;
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 12px;
+            background-color: #677DF5
+        }
+    } 
+    }
+    .btn-wrap{
+        padding-top:70px;
+        width: 750px;
+    }
+    
+}
